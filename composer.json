@@ -1,5 +1,5 @@
 {
-    "name": "ITwrx/password-strength",
+    "name": "ITwrx/PasswordStrengthPackage",
     "description": "This package provides a validator for ensuring strong passwords in Laravel 6 applications.",
     "keywords": [
         "laravel",
