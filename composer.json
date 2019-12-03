@@ -1,5 +1,5 @@
 {
-    "name": "schuppo/password-strength",
+    "name": "ITwrx/password-strength",
     "description": "This package provides a validator for ensuring strong passwords in Laravel 4 applications.",
     "keywords": [
         "laravel",
