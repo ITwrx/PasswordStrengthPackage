@@ -81,7 +81,7 @@ This is just a fork with very minor alterations for Laravel version compat. Plea
 
 # License
 
-This package is under the MIT license. See the complete license:
+This package keeps the MIT license chosen by upstream. See the complete license:
 
 - [LICENSE](https://github.com/schuppo/PasswordStrengthPackage/LICENSE)
 
