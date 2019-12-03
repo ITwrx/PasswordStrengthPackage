@@ -4,7 +4,9 @@ PasswordStrength Package
 [![Total Downloads](https://poser.pugx.org/schuppo/password-strength/downloads)](https://packagist.org/packages/schuppo/password-strength)
 [![License](https://poser.pugx.org/schuppo/password-strength/license)](https://packagist.org/packages/schuppo/password-strength)
 
-This package provides a validator that ensures strong passwords in Laravel 4 & 5 applications. It is influenced  a lot by [PasswordStrengthBundle for Symfony 2](https://github.com/jbafford/PasswordStrengthBundle).
+**[not known working until this message is gone]**
+
+This package provides a validator that ensures strong passwords in Laravel 6 applications. It is influenced  a lot by [PasswordStrengthBundle for Symfony 2](https://github.com/jbafford/PasswordStrengthBundle).
 
 It is out now for a while and since there were no complaints it very likely fulfills its purpose.
 
@@ -21,32 +23,30 @@ The provided validations include:
 
 ### Get the package
 
-**For Laravel 4 users**
+This package can be installed via Composer by adding the following to your `composer.json` file:
 
-Just ```composer require schuppo/password-strength:"~0.10"```.
-
-**For Laravel 5 users**
-
-Just ```composer require schuppo/password-strength:"~1.5"```.
-
-### Initialize the package
-
-> If you do run the package on Laravel 5.5+, you can start using the package at this point. [package auto-discovery](https://medium.com/@taylorotwell/package-auto-discovery-in-laravel-5-5-ea9e3ab20518) takes care of the magic of adding the service provider.
-
-
-If you do not run Laravel 5.5 (or higher), then add the following line under the `providers` array key in *app/config.php*:
-
-```php
-// app/config/app.php
-return array(
-    // ...
-    'providers' => array(
-        // ...
-        \Schuppo\PasswordStrength\PasswordStrengthServiceProvider::class,
-    );
-    // ...
-);
 ```
+    "require": {
+        "itwrx/password-strength": "dev-L6",
+    }
+```
+under the scripts section:
+
+```
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ITwrx/PasswordStrengthPackage.git"
+        }
+    ]
+```
+
+You must then run the following command:
+
+```
+    composer update
+```
+
 
 **Caution**
 
@@ -77,86 +77,7 @@ Notice that you can validate any value with the new rules. The only reason why t
 
 # History
 
-**[Laravel 5 / Laravel 4]**
-
-**[1.11/-]**
-
-Simplifies symbol validation
-
-**[1.10/0.15]**
-
-Adds Chinese and Spanish translation 
-
-**[1.9/0.14]**
-
-Improves Polish translation
-
-**[1.8/0.13]**
-
-Adds Arabic translation
-
-**[1.7/0.12]**
-
-Adds Czech translation
-
-**[1.6/0.11]**
-
-- Adds Russian translation
-
-**[1.5/0.10]**
-
-- Adds unicode flag to case difference validation rule  
-
-**[1.4/0.9]**
-
-- Adds Dutch translation
-- Updates French translation
-- Makes packages php7 ready
-
-**[1.3/0.8.2]**
-
-Adds Romanian translation
-
-**[1.2/0.8.1]**
-
-Adds Polish translation
-
-**[1.1/0.8]**
-
-Adds French translation
-
-**[1.0.2/0.7]**
-
-Updates README.md
-
-**[1.0.1]**
-
-Make package laravel 5 ready
-
-**[0.6]**
-
-- New validation rule to check if input contains symbols. Thanks to [closca](https://github.com/closca) for providing this new feature.
-
-**[0.5.3]**
-
-- Added new version to composer.json
-
-**[0.5.2]**
-
-- Small changes in README.md
-
-**[0.5.1]**
-
-- Minimum requirement (PHP 5.4 because of array chains) is now recognized by composer.json
-
-**[0.4.1]**
-
-- The package works properly now when other extensions of laravel's validator are used as well (like [unique-with](https://github.com/felixkiss/uniquewith-validator)).
-- The package is able to take localization overwrites now as described in the [laravel docs](http://laravel.com/docs/localization#overriding-package-language-files)
-
-**[0.3.1]**
-
-- Fixed: Package validator doesn't overwrite custom validation errror messages any more. Not functional tested though because I have no clue how to set up a test which controls the passing of variables from the password strength package to the native validator INSIDE the package's test folders. Any suggestions?
+This is just a fork with very minor alterations for Laravel version compat. Please see upstream for history info.
 
 # License
 
