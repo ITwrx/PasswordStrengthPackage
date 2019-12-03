@@ -27,7 +27,7 @@ This package can be installed via Composer by adding the following to your `comp
 
 ```
     "require": {
-        "itwrx/password-strength": "dev-L6",
+        "itwrx/password-strength": "dev-lts6",
     }
 ```
 under the scripts section:
